@@ -1,0 +1,10 @@
+web:
+  build: .
+  volumes:
+    - ../home/config.xml:/opt/jenkins/data/config.xml
+    - ../home/hudson.tasks.Maven.xml:/opt/jenkins/data/hudson.tasks.Maven.xml
+    - ../home/jobs:/opt/jenkins/data/jobs
+    - ../home/maven:/root/.m2
+  ports:
+    - "8080:8080"
+
